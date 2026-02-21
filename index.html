@@ -650,13 +650,13 @@ height: 3px;
 <script>
 
     const lenis = new Lenis({
-        duration: 1,
+        duration: 3,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         direction: "vertical",
         gestureDirection: "vertical",
         smooth: true, // Habilita el desplazamiento suave
         smoothTouch: true, // Habilita el desplazamiento suave en dispositivos táctiles
-        touchMultiplier: 2, // Multiplicador para la velocidad del desplazamiento en dispositivos táctiles
+        touchMultiplier: 1, // Multiplicador para la velocidad del desplazamiento en dispositivos táctiles
         infinite: false, // Habilita el desplazamiento infinito
     });
 
@@ -813,5 +813,6 @@ height: 3px;
 
 
 </html>
+
 
 

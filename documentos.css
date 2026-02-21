@@ -1,0 +1,332 @@
+ 
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ :root {
+            --primary-red: #da291c; /* Rojo bandera/político */
+            --dark-red: #a6192e;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --footer-bg: #111111;
+            --blue-overlay: #0d1b2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Dm Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+      
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(180, 20, 20, 0.85), rgba(80, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            width: 100%;
+            
+        }
+
+        .hero h1 {
+            font-family: 'Poppins' ,sans-serif;
+            font-size:4.2rem;
+            font-weight: 900;
+            line-height: 1;
+            max-width: 800px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 1rem;
+            font-weight: 400;
+            max-width: 800px;
+        }
+
+        /* --- SECCIÓN 1: INTRODUCCIÓN --- */
+        .intro-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 0 20px;
+            align-items: start;
+        }
+
+
+        
+        .intro-text h2 {
+            color: var(--primary-red);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 1px;
+            font-family: 'Poppins' ,sans-serif;
+        }
+
+        .intro-text ul {
+            list-style: none;
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 1.2rem;
+
+            line-height: 1.3rem;
+        }
+
+        .intro-text li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .intro-text li::before {
+            content: "•";
+            color: var(--primary-red);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .intro-text strong {
+            color: var(--text-dark);
+        }
+
+        .intro-image-container {
+            position: relative;
+        }
+
+        .intro-image-container img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .blue-card-overlay {
+            background-color: var(--blue-overlay);
+            color: white;
+            padding: 20px;
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            width: 90%;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+
+        .blue-card-overlay::before {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        /* --- SECCIÓN 2: GRID DE DOCUMENTOS --- */
+        .documents-section {
+            background-color: var(--bg-light);
+            padding: 60px 0 100px;
+        }
+
+        .section-title {
+            text-align: left;
+            margin-bottom: 50px;
+            margin-left: 20%;
+            
+        }
+
+        .section-title h2 {
+            color: var(--primary-red);
+            font-size: 2rem;
+            display: inline-block;
+            border-bottom: 2px solid #ff0400;
+            padding-bottom: 10px;
+            line-height: 2rem;
+            
+        }
+
+        .docs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Columna izquierda 1 parte, derecha 2 partes */
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* Tarjeta Izquierda Grande */
+        .featured-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 25px;
+            text-align: left;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .featured-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-family: 'Poppins' , sans-serif;
+        }
+
+        .featured-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-featured {
+            background-color: var(--primary-red);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        /* Grid de 4 Tarjetas */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+         
+
+        .doc-card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                        transition: .3s ease-in;
+
+        }
+
+        .doc-card:hover{
+            transform: scale(1.1);
+            transform:rotateZ('20px') ;
+            border: 2px solid red;
+        }
+
+        .icon-circle {
+            background-color: var(--primary-red);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .icon-circle i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .doc-card h3 {
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-family: 'Poppins' ,sans-serif;
+            text-transform: uppercase;
+        }
+
+        .doc-card p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .btn-download {
+            border: 1px solid var(--primary-red);
+            color: var(--primary-red);
+            background: transparent;
+            padding: 8px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-download:hover {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .docs-container {
+                grid-template-columns: 1fr;
+            }
+            .intro-section {
+                grid-template-columns: 1fr;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .contact-info p, .header-container {
+                justify-content: center;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav ul {
+                display: none; /* Simplificado para móvil */
+            }
+        }
